@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="formbox col-lg-12">
+               <h1 class="py-3"><b>SURVEY FORM</b></h1>
+        <label class="full">Full name</label>
+        <input type="text" id="fname"><br><br>
+        <div id="showfname"></div>
+        <div id="ferror"></div>
+
+        <label class="mail">Email Address</label>
+        <input type="text" id="email"><br><br>
+        <div id="showemail"></div>
+        <div id="eerror"></div>
+
+        <label class="pass">Password</label>
+        <input type="text" id="pword"><br><br>
+        <div id="showpass"></div>
+        <div id="perror"></div>
+
+
+        <label class="passmatch">Enter your password again</label>
+        <input type="text" id="pmatch"><br><br>
+        <div id="match"></div>
+        <div id="matcherr"></div>
+
+
+        <label class="mnumber">Mobile Number</label>
+        <input type="number" id="num"><br><br>
+        <div id="shownum"></div>
+        <div id="numerr"></div>
+
+        <label class="cityselect">Select your city</label>
+        <select id="city"> 
+            <option value="indore">Indore</option>
+            <option value="bhopal">Bhopal </option>
+        </select>
+        <div id="showcity"></div>
+        <div id="cerror"></div><br><br>
+
+        <label class="gen">Please select your gender</label><br><br>
+        <input type="radio" name = "gender" id ="gender">Male</input><br>
+        <input type="radio" name = "gender" id ="gender">Female</input><br>
+        <div id="showgen"></div>
+        <div id="generror"></div>
+        <br>
+        <label class="description">Write about yourself</label><br><br>
+         <textarea id="text"></textarea>
+            <div id="showtext"></div>
+            <div id="texterr"></div>
+        <button id="sbtn" onclick="sData()">Submit</button>
+    </div>
+    </div>
+    </div>
+        <script>
+            let fname = document.getElementById("fname");
+            fname.addEventListener("input", ()=>{
+                document.getElementById("showfname").innerHTML = fname.value;
+
+            });
+            let email = document.getElementById("email");
+            email.addEventListener("input", ()=>{
+                document.getElementById("showemail").innerHTML = email.value;
+
+            });
+            let pword = document.getElementById("pword");
+            pword.addEventListener("input", ()=>{
+                document.getElementById("showpass").innerHTML = pword.value;
+
+            });
+            let pmatch = document.getElementById("pmatch");
+            pmatch.addEventListener("input", ()=>{
+                document.getElementById("match").innerHTML = pmatch.value;
+
+            });
+            let num = document.getElementById("num");
+            num.addEventListener("input", ()=>{
+                document.getElementById("shownum").innerHTML = num.value;
+
+            });
+            let city = document.getElementById("city");
+           city.addEventListener("change", ()=>{
+            document.getElementById("showcity").innerHTML = city.value;
+           })
+           let text = document.getElementById("text");
+           city.addEventListener("input", ()=>{
+            document.getElementById("showtext").innerHTML = text.value;
+           })
+           let btn = document.getElementById("sbtn");
+            btn.addEventListener("click",()=>{
+                let gen = document.getElementById("gender").value;
+                let showgen = document.getElementById("showgen").innerHTML = gen;
+            })
+
+           function sData(){
+
+            let fname = document.getElementById("fname").value;
+            let email = document.getElementById("email").value;
+            let city = document.getElementById("city").value;   
+            let pword = document.getElementById("pword").value;
+            let pmatch = document.getElementById("pmatch").value;
+            let num = document.getElementById("num").value;
+            let text = document.getElementById("text").value;
+
+          if(fname.length==0){
+           let ferror = document.getElementById("ferror").innerHTML = "Empty";
+          }
+
+          if(fname.length>0 && fname.length<3 ){
+           let ferror = document.getElementById("ferror").innerHTML = "Too Short";
+          }
+
+          if(fname.length>=3) {
+          let ferror = document.getElementById("ferror").innerHTML = "Good";
+          }
+          if(email.length==0){
+           let eerror = document.getElementById("eerror").innerHTML = "Empty";
+          }
+
+          if(email.length>0 && email.length<3 ){
+           let eerror = document.getElementById("eerror").innerHTML = "Too Short";
+          }
+
+          if(email.length>=3) {
+          let eerror = document.getElementById("eerror").innerHTML = "Good";
+          }
+          if(pword.length==0){
+           let perror = document.getElementById("perror").innerHTML = "Empty";
+          }
+
+          if(pword.length>0 && pword.length<4 ){
+           let perror = document.getElementById("perror").innerHTML = "Too Short";
+          }
+
+          if(pword.length>=3) {
+          let perror = document.getElementById("perror").innerHTML = "Good";
+          }
+          if(pmatch.length==0){
+           let matcherr = document.getElementById("matcherr").innerHTML = "Empty";
+          }
+
+          if(pmatch.length>0 && pmatch.length<4 ){
+           let perror = document.getElementById("matcherr").innerHTML = "Too Short";
+          }
+
+          if(pmatch.length>=3) {
+          let perror = document.getElementById("matcherr").innerHTML = "Good";
+          }
+          if(num.length==0){
+           let numerr = document.getElementById("numerr").innerHTML = "Empty";
+          }
+
+          if(num.length>0 && num.length<4 ){
+           let numerr = document.getElementById("numerr").innerHTML = "Too Short";
+          }
+
+          if(num.length>=3) {
+          let numerr = document.getElementById("numerr").innerHTML = "Good";
+          }
+          if(text.length==0){
+           let texterr = document.getElementById("texterr").innerHTML = "Empty";
+          }
+
+          if(text.length>0 && text.length<4 ){
+           let texterr = document.getElementById("numerr").innerHTML = "Too Short";
+          }
+
+          if(text.length>=3) {
+          let texterr = document.getElementById("texterr").innerHTML = "Good";
+          }
+          if(pword==pmatch){
+    document.getElementById("perror").innerHTML = "Matched";
+
+}
+else{
+    document.getElementById("perror").innerHTML = "Not matched";
+}
+        }
+
+
+
+
+
+
+
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>

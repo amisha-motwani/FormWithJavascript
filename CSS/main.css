@@ -1,0 +1,53 @@
+.full, .mail, .pass, .mnumber, .gen, .cityselect, .passmatch, .description {
+  background-image: linear-gradient(to right, rgb(0, 58, 62), rgb(1, 119, 193));
+  color: black;
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+  background-repeat: no no-repeat;
+}
+
+#fname, #city, #email, #pword, #num, #gender, #pmatch, #text {
+  background-image: linear-gradient(to right, gray, rgb(176, 173, 173), rgb(255, 255, 255));
+  font-size: 25px;
+  margin-top: 10px;
+  font-family: "Pacifico", cursive;
+}
+#fname:hover, #city:hover, #email:hover, #pword:hover, #num:hover, #gender:hover, #pmatch:hover, #text:hover {
+  background-image: linear-gradient(to right, white, white);
+}
+
+#btn {
+  background-color: brown;
+  font-size: 25px;
+  color: white;
+}
+
+.formbox {
+  background-image: url("https://images.pexels.com/photos/240470/pexels-photo-240470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+}
+.formbox h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  background-image: linear-gradient(to right, rgb(193, 195, 192), rgb(0, 58, 62), rgb(95, 135, 161));
+  color: white;
+}
+.formbox h1:hover {
+  background-image: linear-gradient(to right, rgb(193, 195, 192), rgb(1, 119, 193), rgb(0, 58, 62), rgb(95, 135, 161));
+}
+
+#sbtn {
+  background-image: linear-gradient(to right, rgb(0, 58, 62), white);
+  color: black;
+  border-radius: 20px;
+  font-size: 25px;
+  height: 45px;
+  width: 15%;
+  font-family: "Pacifico", cursive;
+}
+#sbtn:hover {
+  background-image: linear-gradient(to right, white, blue);
+}/*# sourceMappingURL=main.css.map */

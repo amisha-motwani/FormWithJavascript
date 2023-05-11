@@ -1,0 +1,57 @@
+.full,.mail,.pass,.mnumber,.gen, .cityselect,.passmatch, .description{
+    // background-image:linear-gradient(to right, darkblue, rgba(0, 0, 139, 0.584), rgba(0, 0, 139, 0.347)) ;
+    background-image:linear-gradient(to right,rgb(0,58,62), rgb(1,119,193)) ;
+    color:black;
+
+    font-family: 'Pacifico', cursive;
+    font-size:25px;
+    background-repeat: no no-repeat;
+}
+#fname, #city, #email, #pword, #num, #gender,#pmatch, #text{
+    background-image:linear-gradient(to right, gray, rgb(176, 173, 173), rgb(255, 255, 255) ) ;
+    font-size:25px;
+    margin-top:10px;
+    font-family: 'Pacifico', cursive;
+    &:hover{
+        background-image:linear-gradient(to right, white ,white) ;
+    }
+}
+#btn{
+    background-color: brown;
+    font-size:25px;
+    color:white;
+}
+.formbox{
+   
+    // background-image: url("https://www.youramazingplaces.com/wp-content/uploads/2014/03/San-Francisco-California.jpg");
+    // background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2FHD%2520wallpaper%2F&psig=AOvVaw37iyao6mRC8ihkhoR56iGW&ust=1682571970350000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLjuvJXjxv4CFQAAAAAdAAAAABAG");
+    background-image: url("https://images.pexels.com/photos/240470/pexels-photo-240470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    // background-size: auto;
+    text-align:center;
+    h1{
+       font-family: Arial, Helvetica, sans-serif;
+       font-weight: 900;
+        font-size:30px;
+        // background-image:linear-gradient(to right, darkblue,rgba(101, 101, 164, 0.986)) ;
+        background-image:linear-gradient(to right,rgb(193,195,192),rgb(0,58,62),rgb(95,135,161)) ;
+        color: white;
+        &:hover{
+            background-image:linear-gradient(to right,rgb(193,195,192), rgb(1,119,193),rgb(0,58,62),rgb(95,135,161))  ;
+            // background-image:linear-gradient(to right,rgba(101, 101, 164, 0.986), darkblue) ;
+        }
+    }
+}
+#sbtn{
+    background-image:linear-gradient(to right, rgb(0,58,62),white) ;
+    color:black;
+    border-radius:20px;
+    font-size:25px;
+    height:45px;
+    width:15%;
+    font-family: 'Pacifico', cursive;
+    &:hover{
+        background-image:linear-gradient(to right,white, blue) ;
+    }
+}
