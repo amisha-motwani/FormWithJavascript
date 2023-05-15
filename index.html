@@ -13,51 +13,53 @@
         <div class="row">
             <div class="formbox col-lg-12">
                <h1 class="py-3"><b>SURVEY FORM</b></h1>
-        <label class="full">Full name</label>
-        <input type="text" id="fname"><br><br>
-        <div id="showfname"></div>
-        <div id="ferror"></div>
+           <label class="full">Full name</label>
+           <input type="text" id="fname"><br><br>
+           <div id="showfname" style="color: white; font-size: larger;"></div>
+            <div id="ferror" style="color: white; font-size: larger;"></div>
 
         <label class="mail">Email Address</label>
         <input type="text" id="email"><br><br>
-        <div id="showemail"></div>
-        <div id="eerror"></div>
+        <div id="showemail" style="color: white; font-size: larger;"></div>
+        <div id="eerror" style="color: white; font-size: larger;"></div>
 
         <label class="pass">Password</label>
         <input type="text" id="pword"><br><br>
-        <div id="showpass"></div>
-        <div id="perror"></div>
+        <div id="showpass" style="color: white; font-size: larger;"></div>
+        <div id="perror" style="color: white; font-size: larger;"></div>
 
 
         <label class="passmatch">Enter your password again</label>
         <input type="text" id="pmatch"><br><br>
-        <div id="match"></div>
-        <div id="matcherr"></div>
+        <div id="match" style="color: white; font-size: larger; width: 10px; background-color: white;"></div>
+        <div id="matcherr" style="color: white; font-size: larger;"></div>
 
 
         <label class="mnumber">Mobile Number</label>
         <input type="number" id="num"><br><br>
-        <div id="shownum"></div>
-        <div id="numerr"></div>
+        <div id="shownum" style="color: white; font-size: larger;"></div>
+        <div id="numerr" style="color: white; font-size: larger"></div>
 
         <label class="cityselect">Select your city</label>
         <select id="city"> 
             <option value="indore">Indore</option>
             <option value="bhopal">Bhopal </option>
         </select>
-        <div id="showcity"></div>
-        <div id="cerror"></div><br><br>
+        <div id="showcity" style="color: white; font-size: larger;"></div>
+        <div id="cerror" style="color: white; font-size: larger;"></div><br><br>
 
         <label class="gen">Please select your gender</label><br><br>
         <input type="radio" name = "gender" id ="gender">Male</input><br>
         <input type="radio" name = "gender" id ="gender">Female</input><br>
-        <div id="showgen"></div>
-        <div id="generror"></div>
+        <div id="showgen" style="color: white; font-size: larger;"></div>
+        <div id="generror" style="color: white; font-size: larger;"></div>
         <br>
         <label class="description">Write about yourself</label><br><br>
          <textarea id="text"></textarea>
-            <div id="showtext"></div>
-            <div id="texterr"></div>
+            <div id="showtext" style="color: white; font-size: larger;"></div>
+            <div id="texterr"style="color: white; font-size: larger;"></div>
+
+
         <button id="sbtn" onclick="sData()">Submit</button>
     </div>
     </div>
@@ -88,7 +90,7 @@
                 document.getElementById("shownum").innerHTML = num.value;
 
             });
-            let city = document.getElementById("city");
+           let city = document.getElementById("city");
            city.addEventListener("change", ()=>{
             document.getElementById("showcity").innerHTML = city.value;
            })
@@ -103,7 +105,6 @@
             })
 
            function sData(){
-
             let fname = document.getElementById("fname").value;
             let email = document.getElementById("email").value;
             let city = document.getElementById("city").value;   
@@ -180,8 +181,7 @@
           }
           if(pword==pmatch){
     document.getElementById("perror").innerHTML = "Matched";
-
-}
+    }
 else{
     document.getElementById("perror").innerHTML = "Not matched";
 }

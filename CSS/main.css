@@ -50,4 +50,9 @@
 }
 #sbtn:hover {
   background-image: linear-gradient(to right, white, blue);
+}
+
+.perror {
+  color: white;
+  background-color: black;
 }/*# sourceMappingURL=main.css.map */
